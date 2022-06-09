@@ -21,4 +21,10 @@ module.exports = {
     ],
     plugins: ['react', '@typescript-eslint'],
     rules: {},
+    overrides: [
+        {
+            files: ['**/?(*.)+(spec|test).[jt]s'],
+            extends: ['plugin:jest/recommended'],
+        },
+    ],
 };
