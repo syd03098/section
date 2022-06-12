@@ -20,7 +20,9 @@ module.exports = {
         'plugin:prettier/recommended',
     ],
     plugins: ['react', '@typescript-eslint'],
-    rules: {},
+    rules: {
+        '@typescript-eslint/no-var-requires': 0,
+    },
     overrides: [
         {
             files: ['**/?(*.)+(spec|test).[jt]s'],

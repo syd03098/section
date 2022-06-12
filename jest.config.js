@@ -1,1 +1,5 @@
-module.exports = { preset: 'ts-jest' };
+module.exports = {
+    transform: {
+        '^.+\\.(ts|tsx)$': 'esbuild-jest',
+    },
+};
