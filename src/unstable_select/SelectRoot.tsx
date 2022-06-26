@@ -7,7 +7,6 @@ import React, {
     useRef,
     useState,
 } from 'react';
-import { prefetch, PrefetchPlugin } from 'webpack';
 import useOnClickOutside from './hook/useOnClickOutside';
 
 const SelectContext = createContext<

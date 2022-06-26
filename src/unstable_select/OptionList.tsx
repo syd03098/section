@@ -1,10 +1,4 @@
-import React, {
-    ReactNode,
-    useCallback,
-    useEffect,
-    useRef,
-    useState,
-} from 'react';
+import React, { ReactNode, useEffect, useRef } from 'react';
 import useEvent from '../hook/useEvent';
 import { useSelect } from './SelectRoot';
 
