@@ -1,14 +1,14 @@
-import React, { RefObject, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import useEvent from '../../hook/useEvent';
 
 const useOnClickOutside = (
     callback: () => void,
-    permittedElements: (RefObject<HTMLElement> | null | undefined)[],
+    permittedElements: (HTMLElement | null | undefined)[],
     enabled?: boolean
 ) => {
     const onClickOutside = useEvent(({ target }: MouseEvent) => {
-        const clickedOutside = !permittedElements.every((ref) =>
-            ref?.current?.contains(target as HTMLElement)
+        const clickedOutside = !permittedElements.some((element) =>
+            element?.contains(target as HTMLElement)
         );
         if (clickedOutside) {
             callback();
